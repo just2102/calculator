@@ -28,13 +28,15 @@ header {
     margin-left:auto;
     margin-right:auto;
 }
-#output_field {
+#input_field {
     width:20rem;
     height:2rem;
+    padding:2px;
     margin-bottom: 2rem;
     background-color:aquamarine;
-    border-radius:1rem;
+    border-radius:.5rem;
 }
+
 
 .buttons {
     display:grid;

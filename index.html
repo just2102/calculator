@@ -12,23 +12,32 @@
     <header>Calculator</header>
     <div class="middle">
         <div class="calculator">
-            <div id="output_field"></div>
+            <input id="input_field"></input>
             <div class="buttons">
-                <button id="button-seven">7</button>
-                <button id="button-eight">8</button>
-                <button id="button-nine">9</button>
-                <button id="button-multiply">X</button>
-                <button id="button-four">4</button>
-                <button id="button-five">5</button>
-                <button id="button-six">6</button>
-                <button id="button-plus">+</button>
-                <button id="button-one">1</button>
-                <button id="button-two">2</button>
-                <button id="button-three">3</button>
-                <button id="button-minus">-</button>
-                <button id="button-zero">0</button>
-                <button id="button-split">/</button>
+                <button id="button-seven" onclick="buttonClick(7)">7</button>
+                <button id="button-eight" onclick="buttonClick(8)">8</button>
+                <button id="button-nine" onclick="buttonClick(9)">9</button>
+
+                <button id="button-multiply" onclick="buttonClick('*')">*</button>
+
+                <button id="button-four" onclick="buttonClick(4)">4</button>
+                <button id="button-five" onclick="buttonClick(5)">5</button>
+                <button id="button-six" onclick="buttonClick(6)">6</button>
+
+                <button id="button-increment" onclick="buttonClick('+')">+</button>
+
+                <button id="button-one" onclick="buttonClick(1)">1</button>
+                <button id="button-two" onclick="buttonClick(2)">2</button>
+                <button id="button-three" onclick="buttonClick(3)">3</button>
+
+                <button id="button-subtract" onclick="buttonClick('-')">-</button>
+
+                <button id="button-zero" onclick="buttonClick(0)">0</button>
+
+                <button id="button-divide" onclick="buttonClick('/')">/</button>
+
                 <button id="button-result">=</button>
+                <button id="button-clear" onclick="inputField.value=''">C</button>
             </div>
         </div>
         

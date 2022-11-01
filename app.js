@@ -46,15 +46,14 @@ divideButton.addEventListener("click",function() {
 })
 
 
-// итерировать через array ДО первого оператора 
-// после этого выделить эту часть массива в отдельный массив. использовать .join, затем Number()
+
 let aString   =   ''
 let bString   =   ''
 function iterateOverArray() {
     for (let i=0;i<array.indexOf(operator);i++) {
         aString+=array[i]
     }
-    for (let j=array.indexOf(operator);j<array.length;j++) {
+    for (let j=array.indexOf(operator)+1;j<array.length;j++) {
         bString+=array[j];
     }
 }
@@ -81,17 +80,23 @@ function evaluate(a,b) {
         array=Array.from(result);
 
     } else if (operator=='-') {
-        inputField.value    =    subtract(a,b);
-        aString =   subtract(a,b)
+        result = subtract(a,b);
+        inputField.value    =    result;
+        aString =   result;
         bString =   ''
+        array=Array.from(result);
     } else if (operator=='*') {
-        inputField.value    =    multiply(a,b);
-        aString =   multiply(a,b)
+        result = multiply(a,b);
+        inputField.value    =    result;
+        aString =   result;
         bString =   ''
+        Array.from(result);
     } else if(operator=='/') {
-        inputField.value    =   divide(a,b);
-        aString =   divide(a,b)
+        result = divide(a,b);
+        inputField.value    =   result;
+        aString =   result;
         bString =   ''
+        Array.from(result);
     }
 }
 
